@@ -11,13 +11,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     //Declaration des variables
-    private EditText firstNumber, secondNumber;
-    private Button btnPlus;
-    private TextView result;
-
-    private String val1, val2, res;
-
-    private int resultInt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,20 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Affectation des variables
-        firstNumber = findViewById(R.id.first_number);
-        secondNumber = findViewById(R.id.second_number);
-        btnPlus = findViewById(R.id.btn_plus);
-        result = findViewById(R.id.result);
+
 
         // actions
-        btnPlus.setOnClickListener(v -> {
-            val1 = firstNumber.getText().toString();
-            val2 = secondNumber.getText().toString();
-            resultInt = Integer.parseInt(val1) + Integer.parseInt(val2);
-            res = Integer.toString(resultInt);
 
-            result.setText("Result: "+ res);
-        });
     }
 
     // Declaration des methodes
